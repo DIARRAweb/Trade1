@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Trade-Mali</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- HEADER FIXE -->
+  <header class="header">
+    <div class="header-top">
+      <h1 class="logo">Trade-Mali</h1>
+
+      <div id="authButtons" class="auth-buttons">
+        <button class="btn-outline" onclick="openLogin()">Connexion</button>
+        <button class="btn-orange" onclick="openRegister()">Inscription</button>
+      </div>
+
+      <div id="logoutButton" class="auth-buttons hidden">
+        <button class="btn-outline" onclick="logout()">Déconnexion</button>
+      </div>
+    </div>
+
+    <!-- Vidéo défilante -->
+    <div class="market-video">
+      <video autoplay muted loop>
+        <source src="market.mp4" type="video/mp4">
+      </video>
+      <div class="video-text">
+        <h2>Bienvenue sur Trade-Mali 🇲🇱</h2>
+        <p>Le marché en ligne du Mali</p>
+      </div>
+    </div>
+
+    <!-- Barre de recherche -->
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Rechercher un produit, une catégorie..." />
+      <button onclick="searchProducts()">🔍</button>
+    </div>
+  </header>
+
+  <!-- CONTENU DYNAMIQUE -->
+  <main id="mainContent" class="content">
+    <!-- contenu chargé par JS -->
+  </main>
+
+  <!-- FOOTER FIXE -->
+  <footer class="footer">
+    <button onclick="goHome()">🏠 Accueil</button>
+    <button onclick="showAllProducts()">🛍 Produits</button>
+    <button onclick="showCategories()">📂 Catégories</button>
+    <button onclick="showCart()">🛒 Panier</button>
+    <button onclick="showMessages()">💬 Messages</button>
+    <button onclick="showProfile()">👤 Moi</button>
+  </footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
